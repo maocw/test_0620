@@ -5,6 +5,8 @@ import java.util.Date;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import mao.test.service.ServiceTest;
+
 public class ClientTest {
 
 	public static void main(String args[]){

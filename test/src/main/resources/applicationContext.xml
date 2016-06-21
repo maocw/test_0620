@@ -7,10 +7,13 @@
          xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd  
            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd  
            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">  
+
+<aop:aspectj-autoproxy/>  
   
-  
-<bean id="ServiceTest" class="mao.test.controller.ServiceTest" />  
-<bean id="AspectTest" class="mao.test.controller.AspectTest"/>  
+<bean id="ServiceTest" class="mao.test.service.ServiceTest" />  
+<!--  <bean id="AspectTest" class="mao.test.controller.AspectTest"/> -->
+<bean id="TestAop" class="mao.test.controller.TestAop"></bean>
+<!-- 
 <aop:config>  
     <aop:aspect id="securityAspect" ref="AspectTest">  
   
@@ -18,4 +21,5 @@
         <aop:before method="aopTest" pointcut-ref="addAddMethod" />  
     </aop:aspect>  
 </aop:config>  
+ -->  
 </beans>  
