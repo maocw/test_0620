@@ -11,7 +11,7 @@ public class TestController {
 	@RequestMapping(value="/handlerAdapterTest",method=RequestMethod.GET)
 	@ResponseBody
 	public void handlerAdapter(){
-		//System.out.println("tests");
+		System.out.println("test github");
 	}
 	
 	@RequestMapping(value="/filterTest",method=RequestMethod.GET)
