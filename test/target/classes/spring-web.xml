@@ -11,12 +11,12 @@
 	
 	<context:annotation-config />
 	
-	<context:component-scan base-package="mao.test.controller"/>
+	<context:component-scan base-package="com.test.controller"/>
 
-	<!-- <bean id="TestController" class="mao.test.controller.TestController"></bean> -->	
-	<!--  <bean id="FilterTest" class="mao.test.controller.FilterTest"></bean> -->	
-	<bean id="HandlerAdapterTest" class="mao.test.controller.HandlerAdapterTest"></bean> 
-	
+	<!-- <bean id="TestController" class="com.test.controller.TestController"></bean> -->	
+	<!--  <bean id="FilterTest" class="com.test.controller.FilterTest"></bean> -->	
+	<bean id="HandlerAdapterTest" class="com.test.controller.HandlerAdapterTest"></bean> 
+	<bean id="PersonValidator" class="com.test.validator.PersonValidator"></bean>
 	  
 	<!--拦截器 通过注解把一个URL映射到controller上-->
 	<bean

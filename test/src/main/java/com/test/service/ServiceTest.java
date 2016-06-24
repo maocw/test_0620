@@ -1,4 +1,4 @@
-package mao.test.service;
+package com.test.service;
 
 import java.util.Date;
 

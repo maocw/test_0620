@@ -1,4 +1,4 @@
-package mao.test.controller;
+package com.test.controller;
 
 import java.io.IOException;
 import java.util.Date;
