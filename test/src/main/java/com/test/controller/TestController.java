@@ -15,7 +15,7 @@ import com.test.bo.Person;
 import com.test.validator.PersonValidator;
 
 @Controller
-public class TestController {
+public class TestController extends AbstractValidator{
 		
 	@Autowired
 	private PersonValidator personValidator;
@@ -35,16 +35,6 @@ public class TestController {
 	@RequestMapping(value="/validator",method=RequestMethod.GET)
 	@ResponseBody
 	public void validatorTest(Person person ){
-		BeanPropertyBindingResult errors = new BeanPropertyBindingResult(person, "Person");
-		ValidationUtils.invokeValidator(personValidator, person, errors);
-		if (errors.hasErrors()) {
-			List<FieldError> fieldErrors =  errors.getFieldErrors();
-			for (FieldError fieldError : fieldErrors) {
-			//	System.out.println(fieldError.getField());
-				if (fieldError.getField()!=null) {
-					System.out.println(fieldError.getDefaultMessage());
-				}
-			}
-		}
+		super.helloValidator(person, "person", personValidator);
 	}
 }
